@@ -20,7 +20,7 @@ jobs:
           curl \
           -H "Accept: application/vnd.github+json" \ 
           -H "Authorization: Bearer $GH_TOKEN " \
-          https://api.github.com/repos/cadu1982/*/environments/*/deployment-branch-policies/master
+          https://api.github.com/repos/cadu1982/cron-api/environments/prod/deployment-branch-policies/master
          # gh api \
           # -H "Accept: application/vnd.github+json" \
           #  /repos/cadu1982/*/environments/*/deployment-branch-policies
