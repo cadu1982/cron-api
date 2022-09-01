@@ -20,7 +20,20 @@ jobs:
           curl \
           -H "Accept: application/vnd.github+json" \ 
           -H "Authorization: Bearer $GH_TOKEN" \
-          https://api.github.com/repos/cadu1982/cron-api/actions/permissions
+          https://api.github.com/users/cadu1982/repos
+
+
+        # curl \
+          # -X PATCH \
+          # -H "Accept: application/vnd.github+json" \ 
+          # -H "Authorization: Bearer $GH_TOKEN" \
+          # https://api.github.com/repos/cadu1982/cron-api \
+          # -d '{"name":"Hello-World","description":"This is your first repository","homepage":"https://github.com","private":true,"has_issues":true,"has_projects":true,"has_wiki":true}'
+
+        # curl \
+          # -H "Accept: application/vnd.github+json" \ 
+          # -H "Authorization: Bearer $GH_TOKEN" \
+          # https://api.github.com/repos/cadu1982/cron-api/actions/permissions
           
         # # curl \
           # -H "Accept: application/vnd.github+json" \ 
