@@ -1,7 +1,6 @@
-name: Docker System Prune
+name: Test cron
 
 on:
-  workflow_call:
   schedule:
     - cron: '*/5 * * * *'
 
