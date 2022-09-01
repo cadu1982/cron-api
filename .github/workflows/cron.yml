@@ -9,7 +9,7 @@ on:
     types: [opened, synchronize, reopened]
 
 env:
-  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_TOKEN: ${{ secrets.CELP_PAT }}
 
 jobs:
   use_api:
