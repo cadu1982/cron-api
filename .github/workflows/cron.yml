@@ -32,5 +32,5 @@ jobs:
 
         - name: teste 3
           run: |
-            curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" https://api.github.com/repos/cadu1982/hello-work/branches/master/protection/required_pull_request_reviews
+            curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" https://api.github.com/repos/cadu1982/deploy/branches/master/protection/required_pull_request_reviews
         
