@@ -17,9 +17,14 @@ jobs:
       - env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          curl --request GET \
-          --url "https://api.github.com/octocat" \
-          --header "Authorization: Bearer $GH_TOKEN"
+          curl \
+          -H "Accept: application/vnd.github+json" \ 
+          -H "Authorization: Bearer $GH_TOKEN " \
+          https://api.github.com/repos/cadu1982/*/environments/*/deployment-branch-policies/master
          # gh api \
           # -H "Accept: application/vnd.github+json" \
           #  /repos/cadu1982/*/environments/*/deployment-branch-policies
+
+        # curl --request GET \
+          # --url "https://api.github.com/octocat" \
+          # --header "Authorization: Bearer $GH_TOKEN"
