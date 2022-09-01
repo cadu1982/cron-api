@@ -17,15 +17,14 @@ jobs:
     permissions: {}
     steps:
            
-        - name: auten
+        - name: install jason
           run: |
-            curl --request GET \
-            --url "https://api.github.com/octocat" \
-            --header "Authorization: Bearer $GH_TOKEN" \
+            apt update
+            apt install jsonnet
 
         - name: list repo
           run: |    
-            curl \
+            curl --request GET \
             -H "Accept: application/vnd.github+json" \ 
             -H "Authorization: Bearer $GH_TOKEN" \
             https://api.github.com/users/cadu1982/repos
