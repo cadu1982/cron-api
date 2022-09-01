@@ -20,7 +20,7 @@ jobs:
           curl \
           -H "Accept: application/vnd.github+json" \ 
           -H "Authorization: Bearer $GH_TOKEN" \
-          https://api.github.com/users/cadu1982/repos
+          https://api.github.com/users/'cadu1982'/repos
 
 
         # curl \
