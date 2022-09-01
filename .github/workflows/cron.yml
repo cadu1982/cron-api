@@ -19,8 +19,8 @@ jobs:
            
         - name: install jason
           run: |
-            apt update
-            apt install jsonnet
+            sudo apt-get update
+            sudo apt-get install jsonnet
 
         - name: list repo
           run: |    
