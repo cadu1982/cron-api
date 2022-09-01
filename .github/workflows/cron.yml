@@ -1,0 +1,19 @@
+name: Docker System Prune
+
+on:
+  workflow_call:
+  schedule:
+    - cron: '*/5 * * * *'
+
+
+jobs:
+  use_api:
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api \
+          -H "Accept: application/vnd.github+json" \
+           /repos/cadu1982/*/environments/*/deployment-branch-policies
