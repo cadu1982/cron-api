@@ -26,21 +26,8 @@ jobs:
           run: |    
             curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" "https://api.github.com/users/cadu1982/repos"
 
+        - name: Politica branch
+          run: |
+             curl -X PUT -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" https://api.github.com/repos/cadu1982/hello-work/branches/master/protection -d '{"required_status_checks":{"strict":true,"contexts":["continuous-integration/travis-ci"]},"enforce_admins":true,"required_pull_request_reviews":{"dismissal_restrictions":{"users":["octocat"],"teams":["justice-league"]},"dismiss_stale_reviews":false,"require_code_owner_reviews":true,"required_approving_review_count":2,"bypass_pull_request_allowances":{"users":["octocat"],"teams":["justice-league"]}},"restrictions":{"users":["octocat"],"teams":["justice-league"],"apps":["super-ci"]},"required_linear_history":false,"allow_force_pushes":false,"allow_deletions":false,"block_creations":false,"required_conversation_resolution":false}'
 
-        # curl \
-          # -X PATCH \
-          # -H "Accept: application/vnd.github+json" \ 
-          # -H "Authorization: Bearer $GH_TOKEN" \
-          # https://api.github.com/repos/cadu1982/cron-api \
-          # -d '{"name":"Hello-World","description":"This is your first repository","homepage":"https://github.com","private":true,"has_issues":true,"has_projects":true,"has_wiki":true}'
-
-        # curl \
-          # -H "Accept: application/vnd.github+json" \ 
-          # -H "Authorization: Bearer $GH_TOKEN" \
-          # https://api.github.com/repos/cadu1982/cron-api/actions/permissions
-          
         
-
-        # curl --request GET \
-          # --url "https://api.github.com/octocat" \
-          # --header "Authorization: Bearer $GH_TOKEN"
