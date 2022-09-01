@@ -17,17 +17,14 @@ jobs:
     permissions: {}
     steps:
            
-        - name: install json
-          run: |
-            sudo apt-get update
-            sudo apt-get install jsonnet
+        # - name: install json
+        #   run: |
+        #     sudo apt-get update
+        #     sudo apt-get install jsonnet
 
         - name: list repo
           run: |    
-            curl --request GET \
-            -H "Accept: application/vnd.github+json" \ 
-            -H "Authorization: Bearer $GH_TOKEN" \
-            "https://api.github.com/users/cadu1982/repos"
+            curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" "https://api.github.com/users/cadu1982/repos"
 
 
         # curl \
