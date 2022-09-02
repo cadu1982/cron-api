@@ -9,6 +9,5 @@ REPO=$(curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $
 
 for names in $REPO
 do
-  echo $names
-#   curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN " https://api.github.com/repos/cadu1982/$names/branches
+  curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN " https://api.github.com/repos/cadu1982/$names/branches
 done
