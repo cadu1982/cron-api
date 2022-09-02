@@ -22,9 +22,16 @@ jobs:
         #     sudo apt-get update
         #     sudo apt-get install jsonnet
 
-        - name: list repo
-          run: |    
-            curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" "https://api.github.com/users/cadu1982/repos" | awk '/"name"/ {print $2}' | sed -e 's/\"//g' | sed -e 's/\,//g'
+        # - name: list repo
+        #   run: |    
+        #     REPO=$(curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" "https://api.github.com/users/cadu1982/repos" | awk '/"name"/ {print $2}' | sed -e 's/\"//g' | sed -e 's/\,//g')
+
+        - name: Checkout
+          uses: actions/checkout@v3.0.0
+        
+        - name: teste nomes 
+          run: ./teste.sh
+
 
         # - name: Politica branch
         #   run: |
